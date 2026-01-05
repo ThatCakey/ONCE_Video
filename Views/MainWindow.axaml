@@ -1,0 +1,107 @@
+<Window
+    x:Class="once.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:once.ViewModels"
+    Title="once"
+    MinWidth="800"
+    MinHeight="600"
+    d:DesignHeight="900"
+    d:DesignWidth="1600"
+    x:DataType="vm:MainWindowViewModel"
+    CanResize="True"
+    Icon="/Assets/avalonia-logo.ico"
+    SystemDecorations="None"
+    mc:Ignorable="d">
+
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Grid RowDefinitions="Auto,*">
+        <!--  Top Bar  -->
+        <Border
+            Grid.Row="0"
+            Height="35"
+            Background="#2D2D2D"
+            BorderBrush="#1E1E1E"
+            BorderThickness="0,0,0,1"
+            PointerPressed="TopBar_PointerPressed">
+            <Grid ColumnDefinitions="*,Auto">
+                <TextBlock
+                    Grid.Column="0"
+                    Grid.ColumnSpan="4"
+                    Margin="16,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Foreground="White"
+                    Text="Top Bar" />
+                <!--  Minimize  -->
+                <Button
+                    Name="MinimizeButton"
+                    Grid.Column="1"
+                    Width="30"
+                    Height="30"
+                    Margin="0,0,69,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Background="#404040"
+                    Click="TopBar_ButtonClick"
+                    Content="_"
+                    CornerRadius="15"
+                    FontSize="15"
+                    Foreground="White" />
+                <!--  Maximise  -->
+                <Button
+                    Name="MaximizeButton"
+                    Grid.Column="2"
+                    Width="30"
+                    Height="30"
+                    Margin="0,0,37,0"
+                    Padding="0,0,0,2"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Background="#404040"
+                    Click="TopBar_ButtonClick"
+                    Content="☐"
+                    CornerRadius="15"
+                    FontSize="15"
+                    Foreground="White" />
+                <!--  Close Button  -->
+                <Button
+                    Name="CloseButton"
+                    Grid.Column="3"
+                    Width="30"
+                    Height="30"
+                    Margin="0,0,5,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Background="#404040"
+                    Click="TopBar_ButtonClick"
+                    Content="⨯"
+                    CornerRadius="15"
+                    FontSize="15"
+                    Foreground="White" />
+            </Grid>
+        </Border>
+
+        <!--  Main Content  -->
+        <TextBlock
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="{Binding Greeting}" />
+    </Grid>
+</Window>
