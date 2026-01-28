@@ -12,6 +12,7 @@
     d:DesignWidth="1600"
     x:DataType="vm:MainWindowViewModel"
     CanResize="True"
+    FontFamily="avares://once/Assets/Fonts/source-code-pro-semibold.ttf#Source Code Pro"
     Icon="/Assets/avalonia-logo.ico"
     SystemDecorations="None"
     mc:Ignorable="d">
@@ -33,67 +34,160 @@
             BorderBrush="#1E1E1E"
             BorderThickness="0,0,0,1"
             PointerPressed="TopBar_PointerPressed">
-            <Grid ColumnDefinitions="*,Auto">
+            <Grid ColumnDefinitions="*,Auto,*">
+                <Border Grid.Column="0" Background="#00000000">
+                    <StackPanel
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Orientation="Horizontal"
+                        Spacing="1">
+
+                        <Button
+                            Name="File"
+                            Width="50"
+                            Height="34"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Background="#404040"
+                            Click="TopBar_ButtonClick"
+                            Content="File"
+                            CornerRadius="0"
+                            FontSize="12"
+                            Foreground="White">
+                            <Button.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="New" />
+                                    <MenuItem Header="Open" />
+                                    <MenuItem Header="Save" />
+                                    <Separator />
+                                    <MenuItem Header="Exit" />
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+                        <Button
+                            Name="Edit"
+                            Width="50"
+                            Height="34"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Background="#404040"
+                            Click="TopBar_ButtonClick"
+                            Content="Edit"
+                            CornerRadius="0"
+                            FontSize="12"
+                            Foreground="White">
+                            <Button.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="New" />
+                                    <MenuItem Header="Open" />
+                                    <MenuItem Header="Save" />
+                                    <Separator />
+                                    <MenuItem Header="Exit" />
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+                        <Button
+                            Name="View"
+                            Width="50"
+                            Height="34"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Background="#404040"
+                            Click="TopBar_ButtonClick"
+                            Content="View"
+                            CornerRadius="0"
+                            FontSize="12"
+                            Foreground="White">
+                            <Button.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="New" />
+                                    <MenuItem Header="Open" />
+                                    <MenuItem Header="Save" />
+                                    <Separator />
+                                    <MenuItem Header="Exit" />
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+                        <Button
+                            Name="Settings"
+                            Width="75"
+                            Height="34"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Background="#404040"
+                            Click="TopBar_ButtonClick"
+                            Content="Settings"
+                            CornerRadius="0"
+                            FontSize="12"
+                            Foreground="White">
+                            <Button.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="New" />
+                                    <MenuItem Header="Open" />
+                                    <MenuItem Header="Save" />
+                                    <Separator />
+                                    <MenuItem Header="Exit" />
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+
+                    </StackPanel>
+                </Border>
+
                 <TextBlock
-                    Grid.Column="0"
-                    Grid.ColumnSpan="4"
-                    Margin="16,0"
+                    Grid.Column="1"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Foreground="White"
-                    Text="Top Bar" />
-                <!--  Minimize  -->
-                <Button
-                    Name="MinimizeButton"
-                    Grid.Column="1"
-                    Width="30"
-                    Height="30"
-                    Margin="0,0,69,0"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Background="#404040"
-                    Click="TopBar_ButtonClick"
-                    Content="_"
-                    CornerRadius="15"
-                    FontSize="15"
-                    Foreground="White" />
-                <!--  Maximise  -->
-                <Button
-                    Name="MaximizeButton"
+                    Text="{Binding WindowTitle}" />
+
+                <StackPanel
                     Grid.Column="2"
-                    Width="30"
-                    Height="30"
-                    Margin="0,0,37,0"
-                    Padding="0,0,0,2"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Background="#404040"
-                    Click="TopBar_ButtonClick"
-                    Content="☐"
-                    CornerRadius="15"
-                    FontSize="15"
-                    Foreground="White" />
-                <!--  Close Button  -->
-                <Button
-                    Name="CloseButton"
-                    Grid.Column="3"
-                    Width="30"
-                    Height="30"
-                    Margin="0,0,5,0"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Background="#404040"
-                    Click="TopBar_ButtonClick"
-                    Content="⨯"
-                    CornerRadius="15"
-                    FontSize="15"
-                    Foreground="White" />
+                    Orientation="Horizontal"
+                    Spacing="5">
+                    <!--  Minimize  -->
+                    <Button
+                        Name="MinimizeButton"
+                        Width="30"
+                        Height="30"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="#404040"
+                        Click="TopBar_ButtonClick"
+                        Content="_"
+                        CornerRadius="15"
+                        FontSize="15"
+                        Foreground="White" />
+                    <!--  Maximise  -->
+                    <Button
+                        Name="MaximizeButton"
+                        Width="30"
+                        Height="30"
+                        Padding="0,0,0,2"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="#404040"
+                        Click="TopBar_ButtonClick"
+                        Content="{Binding MaximiseButton}"
+                        CornerRadius="15"
+                        FontSize="15"
+                        Foreground="White" />
+                    <!--  Close Button  -->
+                    <Button
+                        Name="CloseButton"
+                        Width="30"
+                        Height="30"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="#404040"
+                        Click="TopBar_ButtonClick"
+                        Content="⨯"
+                        CornerRadius="15"
+                        FontSize="15"
+                        Foreground="White" />
+                </StackPanel>
             </Grid>
         </Border>
 

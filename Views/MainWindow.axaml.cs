@@ -117,6 +117,9 @@ public partial class MainWindow : Window
     private void TopBar_ButtonClick(object sender, RoutedEventArgs e)
     {
         var button = sender as Button;
+
+        if (button == null) return;
+
         if (button?.Name == "MinimizeButton")
         {
             WindowState = WindowState.Minimized;
@@ -128,6 +131,12 @@ public partial class MainWindow : Window
         else if (button?.Name == "CloseButton")
         {
             Close();
+        }
+
+        if (sender is Button && button.ContextMenu is ContextMenu menu)
+        {
+            menu.Transitions?.Clear();
+            menu.Open(button);
         }
     }
 }
