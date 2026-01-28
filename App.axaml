@@ -17,10 +17,4 @@
                 <Transitions />
             </Setter>
         </Style>
-        <Style Selector="ContextMenu /template/ Border#PART_Popup">
-            <Setter Property="Transitions">
-                <Transitions />
-            </Setter>
-        </Style>
-    </Application.Styles> 
 </Application>
