@@ -41,7 +41,7 @@
                         VerticalAlignment="Center"
                         Orientation="Horizontal"
                         Spacing="1">
-
+                        <!--  File  -->
                         <Button
                             Name="File"
                             Width="50"
@@ -64,6 +64,7 @@
                                 </ContextMenu>
                             </Button.ContextMenu>
                         </Button>
+                        <!--  Edit  -->
                         <Button
                             Name="Edit"
                             Width="50"
@@ -86,6 +87,7 @@
                                 </ContextMenu>
                             </Button.ContextMenu>
                         </Button>
+                        <!--  View  -->
                         <Button
                             Name="View"
                             Width="50"
@@ -108,6 +110,7 @@
                                 </ContextMenu>
                             </Button.ContextMenu>
                         </Button>
+                        <!--  Settings  -->
                         <Button
                             Name="Settings"
                             Width="75"
@@ -130,6 +133,19 @@
                                 </ContextMenu>
                             </Button.ContextMenu>
                         </Button>
+                        <!--  Export  -->
+                        <Button
+                            Name="Export"
+                            Width="60"
+                            Height="34"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Background="#404040"
+                            Click="TopBar_ButtonClick"
+                            Content="Export"
+                            CornerRadius="0"
+                            FontSize="12"
+                            Foreground="White" />
 
                     </StackPanel>
                 </Border>
@@ -146,45 +162,45 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     Orientation="Horizontal"
-                    Spacing="5">
+                    Spacing="1">
                     <!--  Minimize  -->
                     <Button
                         Name="MinimizeButton"
-                        Width="30"
-                        Height="30"
+                        Width="34"
+                        Height="34"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Background="#404040"
                         Click="TopBar_ButtonClick"
                         Content="_"
-                        CornerRadius="15"
+                        CornerRadius="0"
                         FontSize="15"
                         Foreground="White" />
                     <!--  Maximise  -->
                     <Button
                         Name="MaximizeButton"
-                        Width="30"
-                        Height="30"
+                        Width="34"
+                        Height="34"
                         Padding="0,0,0,2"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Background="#404040"
                         Click="TopBar_ButtonClick"
                         Content="{Binding MaximiseButton}"
-                        CornerRadius="15"
+                        CornerRadius="0"
                         FontSize="15"
                         Foreground="White" />
                     <!--  Close Button  -->
                     <Button
                         Name="CloseButton"
-                        Width="30"
-                        Height="30"
+                        Width="34"
+                        Height="34"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         Background="#404040"
                         Click="TopBar_ButtonClick"
                         Content="⨯"
-                        CornerRadius="15"
+                        CornerRadius="0"
                         FontSize="15"
                         Foreground="White" />
                 </StackPanel>
