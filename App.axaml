@@ -12,9 +12,5 @@
 
     <Application.Styles>
         <FluentTheme />
-        <Style Selector="ContextMenu">
-            <Setter Property="Transitions">
-                <Transitions />
-            </Setter>
-        </Style>
+    </Application.Styles>
 </Application>
