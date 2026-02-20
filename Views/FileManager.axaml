@@ -1,0 +1,84 @@
+<UserControl
+  x:Class="once.Views.FileManager"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:vm="using:once.ViewModels"
+  d:DesignHeight="450"
+  d:DesignWidth="800"
+  x:DataType="vm:FileManagerViewModel"
+  mc:Ignorable="d">
+
+  <Grid ColumnDefinitions="10*,2*" RowDefinitions="30,*">
+
+    <TextBox
+      Grid.Row="0"
+      Grid.Column="0"
+      Padding="10"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Stretch"
+      Background="#2a2a2a"
+      BorderBrush="#444"
+      FontSize="10"
+      Foreground="White"
+      Watermark="Search..." />
+
+    <Button
+      Name="AddFile"
+      Grid.Row="0"
+      Grid.Column="1"
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Stretch"
+      HorizontalContentAlignment="Center"
+      VerticalContentAlignment="Center"
+      Background="#404040"
+      Content="Add File"
+      CornerRadius="0"
+      FontSize="12"
+      Foreground="White" />
+
+    <ScrollViewer
+      Grid.Row="1"
+      Grid.Column="0"
+      Grid.ColumnSpan="2"
+      ZIndex="1">
+      <ItemsControl
+        Name="FilesList"
+        HorizontalAlignment="Center"
+        ItemsSource="{Binding Files}">
+        <ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <WrapPanel />
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+          <DataTemplate DataType="vm:FileItem">
+            <Border
+              Margin="10"
+              Padding="15"
+              Background="#353535"
+              BorderBrush="#555"
+              BorderThickness="1"
+              CornerRadius="5">
+              <StackPanel Spacing="8">
+                <TextBlock
+                  FontSize="14"
+                  FontWeight="Bold"
+                  Foreground="White"
+                  Text="{Binding Name}" />
+                <TextBlock
+                  FontSize="12"
+                  Foreground="#aaa"
+                  Text="{Binding Size}" />
+              </StackPanel>
+            </Border>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </ScrollViewer>
+
+  </Grid>
+
+
+</UserControl>

@@ -206,12 +206,9 @@
                 </StackPanel>
             </Grid>
         </Border>
+        <Border Grid.Row="1" Background="#202020">
+            <ContentControl Content="{Binding CurrentPanel}" />
+        </Border>
 
-        <!--  Main Content  -->
-        <TextBlock
-            Grid.Row="1"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Text="{Binding Greeting}" />
     </Grid>
 </Window>

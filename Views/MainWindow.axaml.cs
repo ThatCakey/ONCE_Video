@@ -133,7 +133,7 @@ public partial class MainWindow : Window
             Close();
         }
 
-        if (sender is Button && button.ContextMenu is ContextMenu menu)
+        if (sender is Button && button?.ContextMenu is ContextMenu menu)
         {
             menu.Transitions?.Clear();
             menu.Open(button);
