@@ -7,7 +7,13 @@ using Avalonia.Media;
 
 namespace once.ViewModels;
 
-public class ViewportViewModel : ObservableObject
+public partial class ViewportViewModel : ObservableObject
 {
     public IImage ViewportDefault { get; } = new Bitmap("Assets/Images/test.jpg");
+
+    [ObservableProperty]
+    private float volumeDbLeft = -20f;
+
+    [ObservableProperty]
+    private float volumeDbRight = -20f;
 }

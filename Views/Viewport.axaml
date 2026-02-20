@@ -1,12 +1,161 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="using:once.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="once.Views.Viewport"
-             x:DataType="vm:ViewportViewModel">
+<UserControl
+  x:Class="once.Views.Viewport"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:vm="using:once.ViewModels"
+  d:DesignHeight="450"
+  d:DesignWidth="800"
+  x:DataType="vm:ViewportViewModel"
+  mc:Ignorable="d">
 
-  <Image Source="{Binding ViewportDefault}" Stretch="Uniform" />
+  <Grid ColumnDefinitions="50,1*,150" RowDefinitions="1*">
+
+    <Border
+      Grid.Row="0"
+      Grid.Column="0"
+      Background="#1b1919">
+      <StackPanel>
+
+        <TextBlock
+          Margin="0,5"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center"
+          Foreground="#aaa"
+          Text="Tools" />
+        <Grid Margin="5" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+          <Button
+            Width="40"
+            Height="40"
+            Margin="0,5"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Content="↖"
+            FontSize="20" />
+
+          <!--  tool button  -->
+          <Button
+            Grid.Row="1"
+            Width="40"
+            Height="40"
+            Margin="0,5"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Content="⛶"
+            FontSize="20" />
+
+          <!--  tool button  -->
+          <Button
+            Grid.Row="2"
+            Width="40"
+            Height="40"
+            Margin="0,5"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Content="◌"
+            FontSize="20" />
+
+          <!--  tool button  -->
+          <Button
+            Grid.Row="3"
+            Width="40"
+            Height="40"
+            Margin="0,5"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            Content="🖰"
+            FontSize="20" />
+        </Grid>
+      </StackPanel>
+    </Border>
+
+    <Image
+      Grid.Row="0"
+      Grid.Column="1"
+      Margin="5,5,5,5"
+      Source="{Binding ViewportDefault}"
+      Stretch="Uniform" />
+
+
+    <!--  volume display  -->
+    <Border
+      Grid.Row="0"
+      Grid.Column="2"
+      Background="#1b1919">
+
+      <Grid Margin="10" RowDefinitions="Auto,1*">
+        <TextBlock
+          Grid.Row="0"
+          Margin="0,0,0,10"
+          HorizontalAlignment="Center"
+          Foreground="#aaa"
+          Text="Volume" />
+
+        <Grid
+          Grid.Row="1"
+          ColumnDefinitions="1*,1*"
+          RowDefinitions="1*">
+          <Grid Grid.Column="0" RowDefinitions="Auto,1*">
+
+            <TextBlock
+              Grid.Row="0"
+              Margin="0,0,0,5"
+              HorizontalAlignment="Center"
+              FontSize="12"
+              Foreground="#aaa"
+              Text="L" />
+
+            <ProgressBar
+              Grid.Row="1"
+              Width="50"
+              VerticalAlignment="Stretch"
+              Maximum="0"
+              Minimum="-60"
+              Orientation="Vertical"
+              Value="{Binding VolumeDbLeft}">
+              <ProgressBar.Foreground>
+                <LinearGradientBrush StartPoint="0%,100%" EndPoint="0%,0%">
+                  <GradientStop Offset="0" Color="#22aa22" />
+                  <GradientStop Offset="0.7" Color="#ffaa00" />
+                  <GradientStop Offset="1" Color="#ff2222" />
+                </LinearGradientBrush>
+              </ProgressBar.Foreground>
+            </ProgressBar>
+
+          </Grid>
+
+          <Grid Grid.Column="1" RowDefinitions="Auto,1*">
+            
+            <TextBlock
+              Grid.Row="0"
+              Margin="0,0,0,5"
+              HorizontalAlignment="Center"
+              FontSize="12"
+              Foreground="#aaa"
+              Text="R" />
+
+            <ProgressBar
+              Grid.Row="1"
+              Width="50"
+              VerticalAlignment="Stretch"
+              Maximum="0"
+              Minimum="-60"
+              Orientation="Vertical"
+              Value="{Binding VolumeDbRight}">
+              <ProgressBar.Foreground>
+                <LinearGradientBrush StartPoint="0%,100%" EndPoint="0%,0%">
+                  <GradientStop Offset="0" Color="#22aa22" />
+                  <GradientStop Offset="0.7" Color="#ffaa00" />
+                  <GradientStop Offset="1" Color="#ff2222" />
+                </LinearGradientBrush>
+              </ProgressBar.Foreground>
+            </ProgressBar>
+
+          </Grid>
+        </Grid>
+      </Grid>
+    </Border>
+  </Grid>
 
 </UserControl>
