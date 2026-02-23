@@ -98,7 +98,7 @@ public partial class TimelineViewModel : ObservableObject
     [RelayCommand]
     public async Task RenameLayer(LayerViewModel layer)
     {
-        var dialog = new TextInputDialog();
+        var dialog = new TextInputDialog { InitialText = layer.Name };
         var owner = GetMainWindow();
         var result = await dialog.ShowDialog<string?>(owner!);
 
