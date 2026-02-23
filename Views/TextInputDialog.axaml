@@ -1,0 +1,18 @@
+<Window
+  x:Class="once.Views.TextInputDialog"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  Title="Enter Text"
+  Width="300"
+  Height="150"
+  WindowStartupLocation="CenterOwner">
+  
+  <StackPanel Margin="20" Spacing="10">
+    <TextBlock Text="Enter new name:" Foreground="#aaa" />
+    <TextBox x:Name="InputTextBox" Foreground="#aaa" Background="#2d2a2a" />
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10">
+      <Button Content="OK" Click="OK_Click" Width="80" />
+      <Button Content="Cancel" Click="Cancel_Click" Width="80" />
+    </StackPanel>
+  </StackPanel>
+</Window>
