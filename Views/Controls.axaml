@@ -1,0 +1,236 @@
+<UserControl
+  x:Class="once.Views.Controls"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  d:DesignHeight="450"
+  d:DesignWidth="800"
+  mc:Ignorable="d">
+  <Grid RowDefinitions="25,5,1*">
+    <Border
+      Grid.Row="0"
+      Background="#1e1e1e"
+      BorderBrush="#333"
+      BorderThickness="1">
+      <Grid ColumnDefinitions="1*,30" RowDefinitions="30">
+        <TextBox
+          Grid.Row="0"
+          Grid.Column="0"
+          Background="#2a2a2a"
+          BorderBrush="#444"
+          FontSize="12"
+          Foreground="White"
+          Watermark="Search..." />
+        <Button
+          Grid.Row="0"
+          Grid.Column="1"
+          Width="30"
+          Height="30"
+          HorizontalContentAlignment="Center"
+          VerticalContentAlignment="Center"
+          Background="#404040"
+          Content="🔒"
+          CornerRadius="0"
+          FontSize="13"
+          Foreground="White" />
+      </Grid>
+    </Border>
+    <ScrollViewer Grid.Row="2">
+      <StackPanel Margin="1" Orientation="Vertical">
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+        <Border
+          Height="25"
+          Margin="2"
+          Padding="1"
+          Background="#2e2b2b">
+          <TextBlock
+            FontSize="16"
+            Foreground="White"
+            Text="Controll" />
+        </Border>
+
+      </StackPanel>
+    </ScrollViewer>
+  </Grid>
+
+</UserControl>

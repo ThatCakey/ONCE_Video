@@ -59,7 +59,7 @@
             Grid.Row="2"
             Grid.Column="0"
             Background="#221e1e">
-            <local:Placeholder />
+            <local:Controls />
         </Border>
 
         <!--  Vertical Splitter (Bottom)  -->
