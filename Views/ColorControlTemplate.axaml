@@ -1,0 +1,35 @@
+<UserControl
+  x:Class="once.Views.ColorControlTemplate"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:local="using:once.Models"
+  x:DataType="local:ColorControlItem"
+  d:DesignHeight="50"
+  d:DesignWidth="800"
+  mc:Ignorable="d">
+  <Border
+    Height="40"
+    Margin="2"
+    Padding="5"
+    Background="#2e2b2b">
+    <Grid ColumnDefinitions="150,1*,40">
+      <TextBlock
+        Grid.Column="0"
+        VerticalAlignment="Center"
+        FontSize="14"
+        Foreground="White"
+        Text="{Binding Name}" 
+        TextTrimming="CharacterEllipsis"/>
+      <Border
+        Grid.Column="2"
+        Width="30"
+        Height="30"
+        Background="{Binding HexColor}"
+        BorderBrush="#555"
+        BorderThickness="1"
+        CornerRadius="2" />
+    </Grid>
+  </Border>
+</UserControl>

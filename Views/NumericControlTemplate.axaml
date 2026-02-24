@@ -1,0 +1,39 @@
+<UserControl
+  x:Class="once.Views.NumericControlTemplate"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:local="using:once.Models"
+  x:DataType="local:NumericControlItem"
+  d:DesignHeight="50"
+  d:DesignWidth="800"
+  mc:Ignorable="d">
+  <Border
+    Height="40"
+    Margin="2"
+    Padding="5"
+    Background="#2e2b2b">
+    <Grid ColumnDefinitions="1*,3*,60">
+      <TextBlock
+        Grid.Column="0"
+        VerticalAlignment="Center"
+        FontSize="14"
+        Foreground="White"
+        Text="{Binding Name}" 
+        TextTrimming="CharacterEllipsis"/>
+      <Slider
+        Grid.Column="1"
+        Margin="10,-10,10,0"
+        Maximum="{Binding Max}"
+        Minimum="{Binding Min}"
+        Value="{Binding Value}" />
+      <TextBlock
+        Grid.Column="2"
+        VerticalAlignment="Center"
+        FontSize="12"
+        Foreground="#999"
+        Text="{Binding Value}" />
+    </Grid>
+  </Border>
+</UserControl>
