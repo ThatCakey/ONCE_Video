@@ -5,12 +5,13 @@ using System;
 using System.Threading.Tasks;
 using once.Views;
 using Avalonia.Media;
+using System.IO;
 
 namespace once.ViewModels;
 
 public partial class ViewportViewModel : ObservableObject
 {
-    public IImage ViewportDefault { get; } = new Bitmap("Assets/Images/test.jpg");
+    public IImage ViewportDefault { get; } = new Bitmap(Path.Combine(AppContext.BaseDirectory, "Assets/Images/test.jpg"));
 
     [ObservableProperty]
     private float volumeDbLeft = -20f;
